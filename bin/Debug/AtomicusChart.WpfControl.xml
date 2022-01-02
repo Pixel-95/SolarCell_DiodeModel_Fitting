@@ -1,0 +1,2460 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AtomicusChart.WpfControl</name>
+    </assembly>
+    <members>
+        <member name="T:AtomicusChart.WpfControl.BaseChartContextMenu">
+            <summary>
+            Represents base class for chart control context menu.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.BaseChartContextMenu.LastOpeningPixelPosition">
+            <summary>
+            Gets last opening pixel position.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.BaseChartContextMenu.OnOpened(System.Windows.RoutedEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.BaseChartContextMenu.GetDataInOpeningPoint">
+            <summary>
+            Gets picked data.
+            </summary>
+            <returns>Picked data.</returns>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.BaseChartContextMenu.GetCursor2DDataCoordinates">
+            <summary>
+            Get data coordinates of opening context menu.
+            </summary>
+            <returns>Data coordinates.</returns>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.BaseChartContextMenu.OnClosed(System.Windows.RoutedEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.BaseChartContextMenu.OnOpenOnChart(System.Windows.Point,AtomicusChart.WpfControl.ChartControl,System.Windows.RoutedEventArgs)">
+            <summary>
+            The method is called on context menu open.
+            </summary>
+            <param name="openingPosition">Opening position.</param>
+            <param name="chart">Chart control instance.</param>
+            <param name="routedEventArgs">Opening event arguments.</param>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.ChartControl">
+            <summary>
+            Chart Wpf control.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.ChartControl.GetRedrawAccessor">
+            <summary>
+            Gets chart redraw accessor.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.ChartControl.ActionController">
+            <summary>
+            Gets the chart action controller.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.ChartControl.#ctor">
+            <summary>
+            Initializes new instance of <see cref="T:AtomicusChart.WpfControl.ChartControl"/>.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.ChartControl.ArrangeOverride(System.Windows.Size)">
+            <inheritdoc />
+        </member>
+        <member name="M:AtomicusChart.WpfControl.ChartControl.OnRender(System.Windows.Media.DrawingContext)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.ChartControl.Finalize">
+            <summary>
+            Finalizer.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.ChartControl.TryShowEditor(AtomicusChart.Interface.PresentationData.BaseTypes.RenderData)">
+            <summary>
+            Before editor showing.
+            </summary>
+            <param name="renderData">Render data for editor.</param>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ChartControl.BackgroundProperty">
+            <summary>
+            Override of background brush dependency property.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ChartControl.DataSourceProperty">
+            <summary>
+            The DependencyProperty for the DataSource property. 
+            </summary> 
+        </member>
+        <member name="P:AtomicusChart.WpfControl.ChartControl.DataSource">
+            <summary>
+            Gets or sets chart control data source.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ChartControl.LegendItemsProperty">
+            <summary>
+            The DependencyProperty for the LegendItems property. 
+            </summary> 
+        </member>
+        <member name="P:AtomicusChart.WpfControl.ChartControl.LegendItems">
+            <summary>
+            Gets or sets chart control legend items collection.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ChartControl.IsLegendVisibleProperty">
+            <summary>
+            Is legend visible dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.ChartControl.IsLegendVisible">
+            <summary>
+            Gets or sets legend visibility flag.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.ChartControl.Multisampling">
+            <summary>
+            Gets or sets multisampling quality.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ChartControl.MultisamplingProperty">
+            <summary>
+            Multisampling dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.ChartControl.LitSphereBitmap">
+            <summary>
+            Gets or sets environment bitmap.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ChartControl.LitSphereBitmapProperty">
+            <summary>
+            EnvironmentBitmap dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.ChartControl.ScalingCoefficient">
+            <summary>
+            Gets or sets render scaling coefficient.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ChartControl.ScalingCoefficientProperty">
+            <summary>
+            Scaling coefficient dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.ChartControl.IsOitEnabled">
+            <summary>
+            Gets or sets order-independent-transparency-enabled flag.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ChartControl.IsOitEnabledProperty">
+            <summary>
+            Is Oit enabled dependency property.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ChartControl.ObjectScalingProperty">
+            <summary>
+            Is legend visible dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.ChartControl.ObjectScaling">
+            <summary>
+            Gets or sets rendering object scaling.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ChartControl.LegendPositionProperty">
+            <summary>
+            Legend position property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.ChartControl.LegendPosition">
+            <summary>
+            Legend position.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ChartControl.IsLegendMovableProperty">
+            <summary>
+            Is legend movable property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.ChartControl.IsLegendMovable">
+            <summary>
+            Is legend movable.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ChartControl.ColorMapProperty">
+            <summary>
+            ColorMapContainer dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.ChartControl.ColorMapContainer">
+            <summary>
+            Color map.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.ChartControl.AxesSettings">
+            <summary>
+            Gets axes settings.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.ChartControl.View">
+            <summary>
+            Gets view settings.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.ChartControl.SelectionRectangle">
+            <summary>
+            Selection rectangle.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.ChartControl.Light">
+            <summary>
+            Light settings.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.ChartControl.GetSnapshot(System.Nullable{AtomicusChart.Core.DirectX.RenderTargetManagement.RenderTargetDescription},System.Nullable{AtomicusChart.Interface.Data.Vector2F},System.Nullable{System.Windows.Media.Color})">
+            <summary>
+            Renders snapshot with the specified export settings. For efficient multiple snapshot rendering use <see cref="T:AtomicusChart.WpfControl.Snapshoter"/>.
+            </summary>
+            <param name="customRenderTargetDescription">Render target description (optional).</param>
+            <param name="customDpi">Custom dpi.</param>
+            <param name="customBackground">Custom background color.</param>
+            <returns></returns>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.ChartControl.SaveToBitmap(System.String)">
+            <summary>
+            Saves the chart current content into bitmap.
+            </summary>
+            <param name="path">Bitmap file path.</param>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.ChartControl.Pick(System.Windows.Point,System.Boolean)">
+            <summary>
+            Performs hit testing within the specified screen pixel location.
+            </summary>
+            <param name="pixelLocation">On Control pixel location.</param>
+            <param name="useInteractionPickStrategy">Use selection strategy from <see cref="P:AtomicusChart.WpfControl.ChartControl.ActionController"/>. If it's not defined, default picking in pixel will be used.</param>
+            <returns>Picked data or null.</returns>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.ChartControl.GetDataCoordinates2D(System.Windows.Point)">
+            <summary>
+            Returns coordinates of data that is projected to the specified screen pixel location. Works in 2D mode only.
+            </summary>
+            <param name="pixelCoordinates">On-control pixel coordinates.</param>
+            <returns>Data coordinates.</returns>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.ChartControl.GetBounds(AtomicusChart.Interface.Data.Scales@,AtomicusChart.Interface.CameraView.Bounds@,AtomicusChart.Interface.AxesData.BoundsSelectorDelegate)">
+            <summary>
+            Get bounds of object on scene.
+            </summary>
+            <param name="scales">Scales.</param>
+            <param name="boundsSelector">Selector.</param>
+            <param name="bounds">Bounds.</param>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.ChartControl.GetSnapshoter">
+            <summary>
+            Get snapshoter.
+            </summary>
+            <returns>Snapshoter.</returns>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.ChartControl.GetUsedAdapterDescription">
+            <summary>
+            Get description of chart of used adapter.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.LegendPositions">
+            <summary>
+            Contains available legend position dock modes.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.LegendPositions.LeftTop">
+            <summary>
+            Left-top docking.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.LegendPositions.LeftCenter">
+            <summary>
+            Left-center docking.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.LegendPositions.LeftBottom">
+            <summary>
+            Left-bottom docking.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.LegendPositions.RightTop">
+            <summary>
+            Right-top docking.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.LegendPositions.RightCenter">
+            <summary>
+            Right-center docking.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.LegendPositions.RightBottom">
+            <summary>
+            Right-bottom docking.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.LegendPositions.CenterTop">
+            <summary>
+            Center-top docking.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.LegendPositions.CenterBottom">
+            <summary>
+            Center-bottom docking.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.ColorLegend.Color4Converter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.ColorLegend.Color4Converter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Controls.ColorPickerItems.ColorDialog">
+            <summary>
+            Interaction logic for ColorDialog.xaml
+            </summary>
+            <summary>
+            ColorDialog
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Controls.ColorPickerItems.ColorDialog.SelectedColor">
+            <summary>
+            Gets or sets selected color.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorPickerItems.ColorDialog.#ctor">
+            <summary>
+            Initializes new instance of <see cref="T:AtomicusChart.WpfControl.Controls.ColorPickerItems.ColorDialog"/>.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorPickerItems.ColorDialog.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Controls.ColorPickerItems.ColorPicker">
+            <summary>
+            Represents color picker color.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Controls.ColorPickerItems.ColorPicker.EditColorProperty">
+            <summary>
+            <see cref="P:AtomicusChart.WpfControl.Controls.ColorPickerItems.ColorPicker.EditColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Controls.ColorPickerItems.ColorPicker.EditColor">
+            <summary>
+            Gets or sets current color.
+            </summary>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Controls.ColorPickerItems.HueToPositionConverter">
+            <summary>
+            Represents hue-to-position converter class.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorPickerItems.HueToPositionConverter.ProvideValue(System.IServiceProvider)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorPickerItems.HueToPositionConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorPickerItems.HueToPositionConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Controls.ColorPickerItems.HueToBrushConverter">
+            <summary>
+            Represents hue-to-brush converter class.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorPickerItems.HueToBrushConverter.ProvideValue(System.IServiceProvider)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorPickerItems.HueToBrushConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorPickerItems.HueToBrushConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Controls.ColorPickerItems.SaturationAndBrightnessToPositionConverter">
+            <summary>
+            Represents saturation to brightness converter.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorPickerItems.SaturationAndBrightnessToPositionConverter.ProvideValue(System.IServiceProvider)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorPickerItems.SaturationAndBrightnessToPositionConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorPickerItems.SaturationAndBrightnessToPositionConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Controls.ColorSelector">
+            <summary>
+            Represents control selector control.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Controls.ColorSelector.SelectedColorProperty">
+            <summary>
+            <see cref="P:AtomicusChart.WpfControl.Controls.ColorSelector.SelectedColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Controls.ColorSelector.SelectedColor">
+            <summary>
+            Gets or sets selected color.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Controls.ColorSelector.IsOpenedProperty">
+            <summary>
+            <see cref="P:AtomicusChart.WpfControl.Controls.ColorSelector.IsOpened"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Controls.ColorSelector.IsOpened">
+            <summary>
+            Gets or sets selector opened flag.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Controls.ColorSelector.ShowColorPickerCommandProperty">
+            <summary>
+            <see cref="P:AtomicusChart.WpfControl.Controls.ColorSelector.ShowColorPickerCommand"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Controls.ColorSelector.ShowColorPickerCommand">
+            <summary>
+            Gets or sets show-color command.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Controls.ColorSelector.SelectColorCommandProperty">
+            <summary>
+            <see cref="P:AtomicusChart.WpfControl.Controls.ColorSelector.SelectColorCommand"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Controls.ColorSelector.SelectColorCommand">
+            <summary>
+            Gets or sets select-color command.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorSelector.#ctor">
+            <summary>
+            Initializes new instance of <see cref="T:AtomicusChart.WpfControl.Controls.ColorSelector"/>.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorSelector.OnMouseDown(System.Windows.Input.MouseButtonEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Controls.ColorSelector.StandardColors">
+            <summary>
+            Gets standart colors collection.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Controls.ColorSelector.DefColorsTop">
+            <summary>
+            Gets mostly used default colors collection.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Controls.ColorSelector.DefColors">
+            <summary>
+            Gets default colors collection.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorSelector.OnApplyTemplate">
+            <inheritdoc/>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Controls.ColorToBrushConverter">
+            <summary>
+            Color-to-rush converter class.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorToBrushConverter.ProvideValue(System.IServiceProvider)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorToBrushConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorToBrushConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Controls.ColorStopDialog">
+            <summary>
+            Interaction logic for ColorStopDialog.xaml
+            </summary>
+            <summary>
+            ColorStopDialog
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorStopDialog.#ctor">
+            <summary>
+            Initializes new instance of <see cref="T:AtomicusChart.WpfControl.Controls.ColorStopDialog"/>.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorStopDialog.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Controls.ColorStopEditor">
+            <summary>
+            Interaction logic for ColorStopDialog.xaml
+            </summary>
+            <summary>
+            ColorStopEditor
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorStopEditor.#ctor">
+            <summary>
+            Initializes new instance of <see cref="T:AtomicusChart.WpfControl.Controls.ColorStopEditor"/>.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ColorStopEditor.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Controls.ColorStopEditViewModel.EditColorStop">
+            <summary>
+            Gets or sets color stop for edit.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Controls.ColorStopEditViewModel.MinValue">
+            <summary>
+            Gets min bounds of value range.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Controls.ColorStopEditViewModel.MaxValue">
+            <summary>
+            Gets max bound of value range.
+            </summary>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Controls.FontSelector">
+            <summary>
+            Represents font-selector control.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Controls.FontSelector.FontProperty">
+            <summary>
+            <see cref="P:AtomicusChart.WpfControl.Controls.FontSelector.Font"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Controls.FontSelector.Font">
+            <summary>
+            Gets or sets font string description.
+            </summary>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Controls.ImageCheckbox">
+            <summary>
+            Represents image check box control.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Controls.ImageCheckbox.CheckedImageProperty">
+            <summary>
+            The checked image property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Controls.ImageCheckbox.CheckedImage">
+            <summary>
+            Gets or sets the checked state image.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Controls.ImageCheckbox.UncheckedImageProperty">
+            <summary>
+            The unchecked image property
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Controls.ImageCheckbox.UncheckedImage">
+            <summary>
+            Gets or sets the unchecked state image.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Controls.ImageCheckbox.CurrentImageProperty">
+            <summary>
+            Current image dependepcy property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Controls.ImageCheckbox.CurrentImage">
+            <summary>
+            Gets or sets current image.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ImageCheckbox.OnChecked(System.Windows.RoutedEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Controls.ImageCheckbox.OnUnchecked(System.Windows.RoutedEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Converters">
+            <summary>
+            Contains Wpf converter helper methods.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Converters.ToWpfColor(AtomicusChart.Interface.Data.Color4)">
+            <summary>
+            Converts <see cref="T:AtomicusChart.Interface.Data.Color4"/> to <see cref="T:System.Windows.Media.Color"/>.
+            </summary>
+            <param name="color">Source color.</param>
+            <returns>Result color.</returns>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Converters.ToColor4(System.Windows.Media.Color)">
+            <summary>
+            Converts <see cref="T:System.Windows.Media.Color"/> to <see cref="T:AtomicusChart.Interface.Data.Color4"/>.
+            </summary>
+            <param name="color">Source color.</param>
+            <returns></returns>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Editors.CustomEditor">
+            <summary>
+            Represents custom property editor control.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Editors.CustomEditor.#ctor(AtomicusChart.Core.Editors.PropertiesItems.CustomConverterItem)">
+            <summary>
+            Initializes new instance of <see cref="T:AtomicusChart.WpfControl.Editors.CustomEditor"/>.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Editors.SimpleValuesConverter">
+            <summary>
+            Represents simple values converter class.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Editors.SimpleValuesConverter.#ctor(System.Func{System.Object,System.String},System.Func{System.String,System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="converToString"></param>
+            <param name="convertFromString"></param>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Editors.SimpleValuesConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Editors.SimpleValuesConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Editors.SimpleValuesConverter.Validate(System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Editors.EditorDialogWindow">
+            <summary>
+            Interaction logic for EditorDialogWindow.xaml
+            </summary>
+            <summary>
+            EditorDialogWindow
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Editors.EditorDialogWindow.SetPosition(System.Windows.FrameworkElement,System.Windows.FrameworkElement)">
+            <summary>
+            Sets the editor window position.
+            </summary>
+            <param name="content">Editor content.</param>
+            <param name="owner">Editor owner.</param>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Editors.EditorDialogWindow.OnClosed(System.EventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Editors.EditorDialogWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Editors.EditorsContainer">
+            <summary>
+            Reprresents Wpf editors container cont.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Editors.EditorsContainer.Content">
+            <summary>
+            Gets content control.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Editors.EditorsContainer.OkCommand">
+            <summary>
+            Gets Ok command.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Editors.EditorsContainer.CancelCommand">
+            <summary>
+            Gets Cancel command.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Editors.EditorsContainer.#ctor(AtomicusChart.Core.Editors.ViewModels.EditorViewModelBase,System.Windows.FrameworkElement)">
+            <summary>
+            Initializes new instance of <see cref="T:AtomicusChart.WpfControl.Editors.EditorsContainer"/>.
+            </summary>
+            <param name="dataEditor">Editor view model.</param>
+            <param name="content">Editor content.</param>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Editors.FloatTextBox.OnApplyTemplate">
+            <inheritdoc />
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Editors.IntTextBox.OnApplyTemplate">
+            <inheritdoc />
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Editors.StyledWindow">
+            <summary>
+            Represents styled window class.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Editors.StyledWindow.OnApplyTemplate">
+            <inheritdoc/>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Editors.WpfEditorsBuilder">
+            <summary>
+            Builder for editors.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Editors.WpfEditorsBuilder.BuildEditorWindow(System.Windows.FrameworkElement,AtomicusChart.Core.Editors.ViewModels.EditorViewModelBase)">
+            <summary>
+            Builds the editor window.
+            </summary>
+            <param name="locationHelper">The location helper.</param>
+            <param name="viewModel">The view model.</param>
+            <returns></returns>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Editors.EnumLocalizerHelper">
+            <summary>
+            Help to localize enumerables.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Editors.EnumLocalizerHelper.GetEnumLocalizedNames``1">
+            <summary>
+            Get localized enumeration's values.
+            </summary>
+            <typeparam name="T">Type of enumeration for localization.</typeparam>
+            <returns>Enumerable of key value pairs, where key - value of enum, value - localized string name of enum.</returns>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Editors.EnumLocalizerHelper.GetEnumLocalizedNames(System.Type)">
+            <summary>
+            Get localized enumeration's values.
+            </summary>
+            <returns>Enumerable of key value pairs, where key - value of enum boxed to object, value - localized string name of enum.</returns>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Editors.LocalizedValue">
+            <summary>
+            Represents localized enum value.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Editors.LocalizedValue.Value">
+            <summary>
+            Contained value.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Editors.LocalizedValue.DisplayName">
+            <summary>
+            Conteied locatized name.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Editors.LocalizedValue.#ctor(System.Object,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AtomicusChart.WpfControl.Editors.LocalizedValue"/> class.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="displayName">The display name.</param>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.LegendItemBase">
+            <summary>
+            Represents base class for legend item.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.LegendItemBase.RenderData">
+            <summary>
+            Gets render data the legend item is associated with.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.LegendItemBase.#ctor(AtomicusChart.Interface.PresentationData.BaseTypes.RenderData)">
+            <summary>
+            Initializes new instance of <see cref="T:AtomicusChart.WpfControl.LegendItemBase"/>.
+            </summary>
+            <param name="renderData">Render data instance.</param>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Legend.LegendPanel.LegendPosition">
+            <summary>
+            Gets or sets the control dock position.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Legend.LegendPanel.LegendPositionProperty">
+            <summary>
+            Legend position dependency property.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Legend.LegendPanel.OnApplyTemplate">
+            <inheritdoc/>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.AddToQuickAccess">
+            <summary>
+              Looks up a localized string similar to Add to quick access..
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.AmbientIntensity">
+            <summary>
+              Looks up a localized string similar to Ambient intensity.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Apply">
+            <summary>
+              Looks up a localized string similar to Ok.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.ApplyAction">
+            <summary>
+              Looks up a localized string similar to Ok.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Axes">
+            <summary>
+              Looks up a localized string similar to Axes.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.AxisColor">
+            <summary>
+              Looks up a localized string similar to Axis color.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.AxisThickness">
+            <summary>
+              Looks up a localized string similar to Axis thickness.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Background">
+            <summary>
+              Looks up a localized string similar to Background.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.BitmapShouldBeOnePixelWidthOrHeight">
+            <summary>
+              Looks up a localized string similar to Bitmap should be one pixel width or height.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.BorderColor">
+            <summary>
+              Looks up a localized string similar to Border color.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Camera">
+            <summary>
+              Looks up a localized string similar to Camera.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Cancel">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.CancelAction">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.CanNotCreateMeshCanTMakeUnionOf2MeshesWith">
+            <summary>
+              Looks up a localized string similar to Can not create mesh. Can&apos;t make union of 2 meshes with different topologies!.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.CanNotCreateMeshMeshesWithStripTopologyCan">
+            <summary>
+              Looks up a localized string similar to Can not create mesh. Meshes with strip topology can&apos;t be united!.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Cartesian">
+            <summary>
+              Looks up a localized string similar to Cartesian.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.CCW">
+            <summary>
+              Looks up a localized string similar to CCW.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Color">
+            <summary>
+              Looks up a localized string similar to Color.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.ColorFromColorLegend">
+            <summary>
+              Looks up a localized string similar to color from color legend.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.ColorLegend">
+            <summary>
+              Looks up a localized string similar to Color legend.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Contours">
+            <summary>
+              Looks up a localized string similar to Contours.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.ContoursCount">
+            <summary>
+              Looks up a localized string similar to contours count.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.CoordinateSystem">
+            <summary>
+              Looks up a localized string similar to Coordinate system.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.CountOfMinorTicksSegment10">
+            <summary>
+              Looks up a localized string similar to Count of minor ticks (segment 10).
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.CountOfMinorTicksSegment2">
+            <summary>
+              Looks up a localized string similar to Count of minor ticks (segment 2).
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.CountOfMinorTicksSegment5">
+            <summary>
+              Looks up a localized string similar to Count of minor ticks (segment 5).
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.CreateContours">
+            <summary>
+              Looks up a localized string similar to Create contours:.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.CW">
+            <summary>
+              Looks up a localized string similar to CW.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Cylindrical">
+            <summary>
+              Looks up a localized string similar to Cylindrical.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.DataAspectRatio">
+            <summary>
+              Looks up a localized string similar to Data aspect ratio.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.DataScalingX">
+            <summary>
+              Looks up a localized string similar to Data scaling X.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.DataScalingY">
+            <summary>
+              Looks up a localized string similar to Data scaling Y.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.DataScalingZ">
+            <summary>
+              Looks up a localized string similar to Data scaling Z.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Default">
+            <summary>
+              Looks up a localized string similar to Default.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Delete">
+            <summary>
+              Looks up a localized string similar to Delete.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.DeviceInfo">
+            <summary>
+              Looks up a localized string similar to Device info.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.DiffuseIntensity">
+            <summary>
+              Looks up a localized string similar to Diffuse intensity.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.DiffuseLightPosition">
+            <summary>
+              Looks up a localized string similar to Diffuse light position.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Down">
+            <summary>
+              Looks up a localized string similar to Down.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.FieldOfView">
+            <summary>
+              Looks up a localized string similar to Field of view.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.FixedColor">
+            <summary>
+              Looks up a localized string similar to fixed color.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.FixedStartLinear">
+            <summary>
+              Looks up a localized string similar to Fixed start linear.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.FixedStepLinear">
+            <summary>
+              Looks up a localized string similar to Fixed step linear.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.FontColor">
+            <summary>
+              Looks up a localized string similar to Font color.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.IsFixed2dRatio">
+            <summary>
+              Looks up a localized string similar to Fixed 2d Ratio.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.IsOrthogonal">
+            <summary>
+              Looks up a localized string similar to Is orthogonal.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.IsVertical">
+            <summary>
+              Looks up a localized string similar to Is vertical.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Left">
+            <summary>
+              Looks up a localized string similar to Left.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.LegendAndContours">
+            <summary>
+              Looks up a localized string similar to Legend &amp; Contours.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.LegendVisibility">
+            <summary>
+              Looks up a localized string similar to Legend visibility.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Level">
+            <summary>
+              Looks up a localized string similar to Level.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.LevelOfDetails">
+            <summary>
+              Looks up a localized string similar to Level of details.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.LicDataCorruptedMessage">
+            <summary>
+              Looks up a localized string similar to Licensing data was corrupted..
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.LicenseNotFoundExceptionMessage">
+            <summary>
+              Looks up a localized string similar to License data wasn&apos;t found..
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.LightMaterial">
+            <summary>
+              Looks up a localized string similar to Light &amp; Material.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.LightModel">
+            <summary>
+              Looks up a localized string similar to Light model.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Linear">
+            <summary>
+              Looks up a localized string similar to Linear.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.LineStyle">
+            <summary>
+              Looks up a localized string similar to Line style.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Log">
+            <summary>
+              Looks up a localized string similar to Log.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MajorTickColor">
+            <summary>
+              Looks up a localized string similar to Major tick color.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Margin2D">
+            <summary>
+              Looks up a localized string similar to Margin 2D cartesian axes.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MarginEditor">
+            <summary>
+              Looks up a localized string similar to Margin editor.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Marker">
+            <summary>
+              Looks up a localized string similar to Marker.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MarkerColor">
+            <summary>
+              Looks up a localized string similar to Marker color.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MarkerRadius">
+            <summary>
+              Looks up a localized string similar to Marker radius.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MarkerSize">
+            <summary>
+              Looks up a localized string similar to Marker size.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MarkerStyle">
+            <summary>
+              Looks up a localized string similar to Marker style.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MarkerStyle_Circle">
+            <summary>
+              Looks up a localized string similar to Circle.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MarkerStyle_Cross">
+            <summary>
+              Looks up a localized string similar to Cross.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MarkerStyle_None">
+            <summary>
+              Looks up a localized string similar to None.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MarkerStyle_Rhombus">
+            <summary>
+              Looks up a localized string similar to Rhombus.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MarkerStyle_Square">
+            <summary>
+              Looks up a localized string similar to Square.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MarkerStyle_Triangle">
+            <summary>
+              Looks up a localized string similar to Triangle.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MarkerType">
+            <summary>
+              Looks up a localized string similar to Marker.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MinorTickColor">
+            <summary>
+              Looks up a localized string similar to Minor tick color.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MSAAQuality">
+            <summary>
+              Looks up a localized string similar to MSAA Quality.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MSAAQuality_High8X">
+            <summary>
+              Looks up a localized string similar to High 8X.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MSAAQuality_Low2X">
+            <summary>
+              Looks up a localized string similar to Low 2X.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MSAAQuality_Middle4X">
+            <summary>
+              Looks up a localized string similar to Middle 4X.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.MSAAQuality_Off">
+            <summary>
+              Looks up a localized string similar to Off.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.NanColor">
+            <summary>
+              Looks up a localized string similar to Nan color.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.NoText">
+            <summary>
+              Looks up a localized string similar to No text.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Options1">
+            <summary>
+              Looks up a localized string similar to Options.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.OptionsDialog">
+            <summary>
+              Looks up a localized string similar to Options dialog.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.OutOfRange">
+            <summary>
+              Looks up a localized string similar to Out Of Range:.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Padding">
+            <summary>
+              Looks up a localized string similar to Padding.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Pattern">
+            <summary>
+              Looks up a localized string similar to Pattern.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.PatternStyle_DashDash">
+            <summary>
+              Looks up a localized string similar to DashDash.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.PatternStyle_DashDot">
+            <summary>
+              Looks up a localized string similar to DashDot.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.PatternStyle_Solid">
+            <summary>
+              Looks up a localized string similar to Solid.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.PatternType">
+            <summary>
+              Looks up a localized string similar to Pattern.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Pixelate">
+            <summary>
+              Looks up a localized string similar to Pixelate.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Projection2D">
+            <summary>
+              Looks up a localized string similar to Projection 2D.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Recreate">
+            <summary>
+              Looks up a localized string similar to Recreate.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.RemoveFromQuickAccess">
+            <summary>
+              Looks up a localized string similar to Remove from quick access..
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.ResetCameraOnCollectionChanged">
+            <summary>
+              Looks up a localized string similar to Reset camera on collection changed.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.ResetCameraOnDataChanged">
+            <summary>
+              Looks up a localized string similar to Reset camera on data changed.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.ResetCameraOnDataSourceChanged">
+            <summary>
+              Looks up a localized string similar to Reset camera on data source changed.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.ResetCameraOnItemChanged">
+            <summary>
+              Looks up a localized string similar to Reset camera on item changed.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.ResetCameraOnSourceChanged">
+            <summary>
+              Looks up a localized string similar to Reset camera on source changed.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Right">
+            <summary>
+              Looks up a localized string similar to Right.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.RimColor">
+            <summary>
+              Looks up a localized string similar to Rim color.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.RimIntensity">
+            <summary>
+              Looks up a localized string similar to Rim intensity.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.RotateClockwise">
+            <summary>
+              Looks up a localized string similar to Rotate clockwise.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.RotateCounterclockwise">
+            <summary>
+              Looks up a localized string similar to Rotate counterclockwise.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.RotateDown">
+            <summary>
+              Looks up a localized string similar to Rotate down.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.RotateLeft">
+            <summary>
+              Looks up a localized string similar to Rotate left.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.RotateRight">
+            <summary>
+              Looks up a localized string similar to Rotate right.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.RotateUp">
+            <summary>
+              Looks up a localized string similar to Rotate up.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.SetDefaultAction">
+            <summary>
+              Looks up a localized string similar to Set to default.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.ShowSolid">
+            <summary>
+              Looks up a localized string similar to Show Solid.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.ShowWaterfall">
+            <summary>
+              Looks up a localized string similar to Show Waterfall.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.ShowWireframe">
+            <summary>
+              Looks up a localized string similar to Show Wireframe.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.SpecularColor">
+            <summary>
+              Looks up a localized string similar to Specular color.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.SpecularIntensity">
+            <summary>
+              Looks up a localized string similar to Specular intensity.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.SpecularLightPosition">
+            <summary>
+              Looks up a localized string similar to Specular light position.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Spherical">
+            <summary>
+              Looks up a localized string similar to Spherical.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Sqrt">
+            <summary>
+              Looks up a localized string similar to Sqrt.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.StripeColor">
+            <summary>
+              Looks up a localized string similar to Stripe color.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.StructureViewMode">
+            <summary>
+              Looks up a localized string similar to Structure view mode.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Text1">
+            <summary>
+              Looks up a localized string similar to Text.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Thickness">
+            <summary>
+              Looks up a localized string similar to Thickness.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Thickness1">
+            <summary>
+              Looks up a localized string similar to Thickness :.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.TickFont">
+            <summary>
+              Looks up a localized string similar to Tick font.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.TickFontSize">
+            <summary>
+              Looks up a localized string similar to Tick font size.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.TickFontStyle">
+            <summary>
+              Looks up a localized string similar to Tick font style.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.TickLabelColor">
+            <summary>
+              Looks up a localized string similar to Tick label color.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.TickLabelFormat">
+            <summary>
+              Looks up a localized string similar to Tick label format.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.TickLabelLogFormat">
+            <summary>
+              Looks up a localized string similar to Tick label log format.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.TickSize">
+            <summary>
+              Looks up a localized string similar to Tick size.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.TickThickness">
+            <summary>
+              Looks up a localized string similar to Tick thickness.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Title">
+            <summary>
+              Looks up a localized string similar to Title.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.TitleColor">
+            <summary>
+              Looks up a localized string similar to Title color.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.TitleFont">
+            <summary>
+              Looks up a localized string similar to Title font.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.TitleFontSize">
+            <summary>
+              Looks up a localized string similar to Title font size.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.TitleFontStyle">
+            <summary>
+              Looks up a localized string similar to Title font style.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.TitleOffset">
+            <summary>
+              Looks up a localized string similar to Title Offset.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.TrialHasExpired">
+            <summary>
+              Looks up a localized string similar to Trial has expired..
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.TypeX0DoesnTNotInheritRenderData">
+            <summary>
+              Looks up a localized string similar to Type &apos;{0}&apos; doesn&apos;t not inherit RenderData.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.UnknownType">
+            <summary>
+              Looks up a localized string similar to Unknown type.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Untitled">
+            <summary>
+              Looks up a localized string similar to Untitled.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Up">
+            <summary>
+              Looks up a localized string similar to Up.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.UseScientificFormatForLog">
+            <summary>
+              Looks up a localized string similar to Use scientific format for log.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.ValueMustBeFrom0To1">
+            <summary>
+              Looks up a localized string similar to Value must be from 0 to 1..
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.View">
+            <summary>
+              Looks up a localized string similar to View.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.Visible">
+            <summary>
+              Looks up a localized string similar to Visible.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.WithStep">
+            <summary>
+              Looks up a localized string similar to with step.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.XR">
+            <summary>
+              Looks up a localized string similar to X (R).
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.YPhi">
+            <summary>
+              Looks up a localized string similar to Y (Phi).
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Properties.Resources.ZTheta">
+            <summary>
+              Looks up a localized string similar to Z (theta).
+            </summary>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric">
+            <summary>
+            Flags used with the Windows API (User32.dll):GetSystemMetrics(SystemMetric smIndex)
+             
+            This Enum and declaration signature was written by Gabriel T. Sharp
+            ai_productions@verizon.net or osirisgothra@hotmail.com
+            Obtained on pinvoke.net, please contribute your code to support the wiki!
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_ARRANGE">
+            <summary>
+            The flags that specify how the system arranged minimized windows. For more information, see the Remarks section in this topic.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CLEANBOOT">
+            <summary>
+            The value that specifies how the system is started:
+            0 Normal boot
+            1 Fail-safe boot
+            2 Fail-safe with network boot
+            A fail-safe boot (also called SafeBoot, Safe Mode, or Clean Boot) bypasses the user startup files.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CMONITORS">
+            <summary>
+            The number of display monitors on a desktop. For more information, see the Remarks section in this topic.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CMOUSEBUTTONS">
+            <summary>
+            The number of buttons on a mouse, or zero if no mouse is installed.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXBORDER">
+            <summary>
+            The width of a window border, in pixels. This is equivalent to the SM_CXEDGE value for windows with the 3-D look.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXCURSOR">
+            <summary>
+            The width of a cursor, in pixels. The system cannot create cursors of other sizes.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXDLGFRAME">
+            <summary>
+            This value is the same as SM_CXFIXEDFRAME.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXDOUBLECLK">
+            <summary>
+            The width of the rectangle around the location of a first click in a double-click sequence, in pixels. ,
+            The second click must occur within the rectangle that is defined by SM_CXDOUBLECLK and SM_CYDOUBLECLK for the system
+            to consider the two clicks a double-click. The two clicks must also occur within a specified time.
+            To set the width of the double-click rectangle, call SystemParametersInfo with SPI_SETDOUBLECLKWIDTH.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXDRAG">
+            <summary>
+            The number of pixels on either side of a mouse-down point that the mouse pointer can move before a drag operation begins.
+            This allows the user to click and release the mouse button easily without unintentionally starting a drag operation.
+            If this value is negative, it is subtracted from the left of the mouse-down point and added to the right of it.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXEDGE">
+            <summary>
+            The width of a 3-D border, in pixels. This metric is the 3-D counterpart of SM_CXBORDER.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXFIXEDFRAME">
+            <summary>
+            The thickness of the frame around the perimeter of a window that has a caption but is not sizable, in pixels.
+            SM_CXFIXEDFRAME is the height of the horizontal border, and SM_CYFIXEDFRAME is the width of the vertical border.
+            This value is the same as SM_CXDLGFRAME.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXFOCUSBORDER">
+            <summary>
+            The width of the left and right edges of the focus rectangle that the DrawFocusRectdraws.
+            This value is in pixels.
+            Windows 2000:  This value is not supported.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXFRAME">
+            <summary>
+            This value is the same as SM_CXSIZEFRAME.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXFULLSCREEN">
+            <summary>
+            The width of the client area for a full-screen window on the primary display monitor, in pixels.
+            To get the coordinates of the portion of the screen that is not obscured by the system taskbar or by application desktop toolbars,
+            call the SystemParametersInfofunction with the SPI_GETWORKAREA value.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXHSCROLL">
+            <summary>
+            The width of the arrow bitmap on a horizontal scroll bar, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXHTHUMB">
+            <summary>
+            The width of the thumb box in a horizontal scroll bar, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXICON">
+            <summary>
+            The default width of an icon, in pixels. The LoadIcon function can load only icons with the dimensions
+            that SM_CXICON and SM_CYICON specifies.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXICONSPACING">
+            <summary>
+            The width of a grid cell for items in large icon view, in pixels. Each item fits into a rectangle of size
+            SM_CXICONSPACING by SM_CYICONSPACING when arranged. This value is always greater than or equal to SM_CXICON.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXMAXIMIZED">
+            <summary>
+            The default width, in pixels, of a maximized top-level window on the primary display monitor.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXMAXTRACK">
+            <summary>
+            The default maximum width of a window that has a caption and sizing borders, in pixels.
+            This metric refers to the entire desktop. The user cannot drag the window frame to a size larger than these dimensions.
+            A window can override this value by processing the WM_GETMINMAXINFO message.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXMENUCHECK">
+            <summary>
+            The width of the default menu check-mark bitmap, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXMENUSIZE">
+            <summary>
+            The width of menu bar buttons, such as the child window close button that is used in the multiple document interface, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXMIN">
+            <summary>
+            The minimum width of a window, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXMINIMIZED">
+            <summary>
+            The width of a minimized window, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXMINSPACING">
+            <summary>
+            The width of a grid cell for a minimized window, in pixels. Each minimized window fits into a rectangle this size when arranged.
+            This value is always greater than or equal to SM_CXMINIMIZED.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXMINTRACK">
+            <summary>
+            The minimum tracking width of a window, in pixels. The user cannot drag the window frame to a size smaller than these dimensions.
+            A window can override this value by processing the WM_GETMINMAXINFO message.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXPADDEDBORDER">
+            <summary>
+            The amount of border padding for captioned windows, in pixels. Windows XP/2000:  This value is not supported.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXSCREEN">
+            <summary>
+            The width of the screen of the primary display monitor, in pixels. This is the same value obtained by calling 
+            GetDeviceCaps as follows: GetDeviceCaps( hdcPrimaryMonitor, HORZRES).
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXSIZE">
+            <summary>
+            The width of a button in a window caption or title bar, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXSIZEFRAME">
+            <summary>
+            The thickness of the sizing border around the perimeter of a window that can be resized, in pixels.
+            SM_CXSIZEFRAME is the width of the horizontal border, and SM_CYSIZEFRAME is the height of the vertical border.
+            This value is the same as SM_CXFRAME.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXSMICON">
+            <summary>
+            The recommended width of a small icon, in pixels. Small icons typically appear in window captions and in small icon view.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXSMSIZE">
+            <summary>
+            The width of small caption buttons, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXVIRTUALSCREEN">
+            <summary>
+            The width of the virtual screen, in pixels. The virtual screen is the bounding rectangle of all display monitors.
+            The SM_XVIRTUALSCREEN metric is the coordinates for the left side of the virtual screen.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CXVSCROLL">
+            <summary>
+            The width of a vertical scroll bar, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYBORDER">
+            <summary>
+            The height of a window border, in pixels. This is equivalent to the SM_CYEDGE value for windows with the 3-D look.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYCAPTION">
+            <summary>
+            The height of a caption area, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYCURSOR">
+            <summary>
+            The height of a cursor, in pixels. The system cannot create cursors of other sizes.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYDLGFRAME">
+            <summary>
+            This value is the same as SM_CYFIXEDFRAME.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYDOUBLECLK">
+            <summary>
+            The height of the rectangle around the location of a first click in a double-click sequence, in pixels.
+            The second click must occur within the rectangle defined by SM_CXDOUBLECLK and SM_CYDOUBLECLK for the system to consider
+            the two clicks a double-click. The two clicks must also occur within a specified time. To set the height of the double-click
+            rectangle, call SystemParametersInfo with SPI_SETDOUBLECLKHEIGHT.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYDRAG">
+            <summary>
+            The number of pixels above and below a mouse-down point that the mouse pointer can move before a drag operation begins.
+            This allows the user to click and release the mouse button easily without unintentionally starting a drag operation.
+            If this value is negative, it is subtracted from above the mouse-down point and added below it.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYEDGE">
+            <summary>
+            The height of a 3-D border, in pixels. This is the 3-D counterpart of SM_CYBORDER.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYFIXEDFRAME">
+            <summary>
+            The thickness of the frame around the perimeter of a window that has a caption but is not sizable, in pixels.
+            SM_CXFIXEDFRAME is the height of the horizontal border, and SM_CYFIXEDFRAME is the width of the vertical border.
+            This value is the same as SM_CYDLGFRAME.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYFOCUSBORDER">
+            <summary>
+            The height of the top and bottom edges of the focus rectangle drawn byDrawFocusRect.
+            This value is in pixels.
+            Windows 2000:  This value is not supported.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYFRAME">
+            <summary>
+            This value is the same as SM_CYSIZEFRAME.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYFULLSCREEN">
+            <summary>
+            The height of the client area for a full-screen window on the primary display monitor, in pixels.
+            To get the coordinates of the portion of the screen not obscured by the system taskbar or by application desktop toolbars,
+            call the SystemParametersInfo function with the SPI_GETWORKAREA value.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYHSCROLL">
+            <summary>
+            The height of a horizontal scroll bar, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYICON">
+            <summary>
+            The default height of an icon, in pixels. The LoadIcon function can load only icons with the dimensions SM_CXICON and SM_CYICON.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYICONSPACING">
+            <summary>
+            The height of a grid cell for items in large icon view, in pixels. Each item fits into a rectangle of size
+            SM_CXICONSPACING by SM_CYICONSPACING when arranged. This value is always greater than or equal to SM_CYICON.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYKANJIWINDOW">
+            <summary>
+            For double byte character set versions of the system, this is the height of the Kanji window at the bottom of the screen, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYMAXIMIZED">
+            <summary>
+            The default height, in pixels, of a maximized top-level window on the primary display monitor.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYMAXTRACK">
+            <summary>
+            The default maximum height of a window that has a caption and sizing borders, in pixels. This metric refers to the entire desktop.
+            The user cannot drag the window frame to a size larger than these dimensions. A window can override this value by processing
+            the WM_GETMINMAXINFO message.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYMENU">
+            <summary>
+            The height of a single-line menu bar, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYMENUCHECK">
+            <summary>
+            The height of the default menu check-mark bitmap, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYMENUSIZE">
+            <summary>
+            The height of menu bar buttons, such as the child window close button that is used in the multiple document interface, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYMIN">
+            <summary>
+            The minimum height of a window, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYMINIMIZED">
+            <summary>
+            The height of a minimized window, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYMINSPACING">
+            <summary>
+            The height of a grid cell for a minimized window, in pixels. Each minimized window fits into a rectangle this size when arranged.
+            This value is always greater than or equal to SM_CYMINIMIZED.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYMINTRACK">
+            <summary>
+            The minimum tracking height of a window, in pixels. The user cannot drag the window frame to a size smaller than these dimensions.
+            A window can override this value by processing the WM_GETMINMAXINFO message.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYSCREEN">
+            <summary>
+            The height of the screen of the primary display monitor, in pixels. This is the same value obtained by calling 
+            GetDeviceCaps as follows: GetDeviceCaps( hdcPrimaryMonitor, VERTRES).
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYSIZE">
+            <summary>
+            The height of a button in a window caption or title bar, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYSIZEFRAME">
+            <summary>
+            The thickness of the sizing border around the perimeter of a window that can be resized, in pixels.
+            SM_CXSIZEFRAME is the width of the horizontal border, and SM_CYSIZEFRAME is the height of the vertical border.
+            This value is the same as SM_CYFRAME.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYSMCAPTION">
+            <summary>
+            The height of a small caption, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYSMICON">
+            <summary>
+            The recommended height of a small icon, in pixels. Small icons typically appear in window captions and in small icon view.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYSMSIZE">
+            <summary>
+            The height of small caption buttons, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYVIRTUALSCREEN">
+            <summary>
+            The height of the virtual screen, in pixels. The virtual screen is the bounding rectangle of all display monitors.
+            The SM_YVIRTUALSCREEN metric is the coordinates for the top of the virtual screen.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYVSCROLL">
+            <summary>
+            The height of the arrow bitmap on a vertical scroll bar, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_CYVTHUMB">
+            <summary>
+            The height of the thumb box in a vertical scroll bar, in pixels.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_DBCSENABLED">
+            <summary>
+            Nonzero if User32.dll supports DBCS; otherwise, 0.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_DEBUG">
+            <summary>
+            Nonzero if the debug version of User.exe is installed; otherwise, 0.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_DIGITIZER">
+            <summary>
+            Nonzero if the current operating system is Windows 7 or Windows Server 2008 R2 and the Tablet PC Input
+            service is started; otherwise, 0. The return value is a bitmask that specifies the type of digitizer input supported by the device.
+            For more information, see Remarks.
+            Windows Server 2008, Windows Vista, and Windows XP/2000:  This value is not supported.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_IMMENABLED">
+            <summary>
+            Nonzero if Input Method Manager/Input Method Editor features are enabled; otherwise, 0.
+            SM_IMMENABLED indicates whether the system is ready to use a Unicode-based IME on a Unicode application.
+            To ensure that a language-dependent IME works, check SM_DBCSENABLED and the system ANSI code page.
+            Otherwise the ANSI-to-Unicode conversion may not be performed correctly, or some components like fonts
+            or registry settings may not be present.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_MAXIMUMTOUCHES">
+            <summary>
+            Nonzero if there are digitizers in the system; otherwise, 0. SM_MAXIMUMTOUCHES returns the aggregate maximum of the
+            maximum number of contacts supported by every digitizer in the system. If the system has only single-touch digitizers,
+            the return value is 1. If the system has multi-touch digitizers, the return value is the number of simultaneous contacts
+            the hardware can provide. Windows Server 2008, Windows Vista, and Windows XP/2000:  This value is not supported.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_MEDIACENTER">
+            <summary>
+            Nonzero if the current operating system is the Windows XP, Media Center Edition, 0 if not.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_MENUDROPALIGNMENT">
+            <summary>
+            Nonzero if drop-down menus are right-aligned with the corresponding menu-bar item; 0 if the menus are left-aligned.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_MIDEASTENABLED">
+            <summary>
+            Nonzero if the system is enabled for Hebrew and Arabic languages, 0 if not.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_MOUSEPRESENT">
+            <summary>
+            Nonzero if a mouse is installed; otherwise, 0. This value is rarely zero, because of support for virtual mice and because
+            some systems detect the presence of the port instead of the presence of a mouse.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_MOUSEHORIZONTALWHEELPRESENT">
+            <summary>
+            Nonzero if a mouse with a horizontal scroll wheel is installed; otherwise 0.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_MOUSEWHEELPRESENT">
+            <summary>
+            Nonzero if a mouse with a vertical scroll wheel is installed; otherwise 0.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_NETWORK">
+            <summary>
+            The least significant bit is set if a network is present; otherwise, it is cleared. The other bits are reserved for future use.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_PENWINDOWS">
+            <summary>
+            Nonzero if the Microsoft Windows for Pen computing extensions are installed; zero otherwise.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_REMOTECONTROL">
+            <summary>
+            This system metric is used in a Terminal Services environment to determine if the current Terminal Server session is
+            being remotely controlled. Its value is nonzero if the current session is remotely controlled; otherwise, 0.
+            You can use terminal services management tools such as Terminal Services Manager (tsadmin.msc) and shadow.exe to
+            control a remote session. When a session is being remotely controlled, another user can view the contents of that session
+            and potentially interact with it.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_REMOTESESSION">
+            <summary>
+            This system metric is used in a Terminal Services environment. If the calling process is associated with a Terminal Services
+            client session, the return value is nonzero. If the calling process is associated with the Terminal Services console session,
+            the return value is 0.
+            Windows Server 2003 and Windows XP:  The console session is not necessarily the physical console.
+            For more information, seeWTSGetActiveConsoleSessionId.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_SAMEDISPLAYFORMAT">
+            <summary>
+            Nonzero if all the display monitors have the same color format, otherwise, 0. Two displays can have the same bit depth,
+            but different color formats. For example, the red, green, and blue pixels can be encoded with different numbers of bits,
+            or those bits can be located in different places in a pixel color value.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_SECURE">
+            <summary>
+            This system metric should be ignored; it always returns 0.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_SERVERR2">
+            <summary>
+            The build number if the system is Windows Server 2003 R2; otherwise, 0.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_SHOWSOUNDS">
+            <summary>
+            Nonzero if the user requires an application to present information visually in situations where it would otherwise present
+            the information only in audible form; otherwise, 0.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_SHUTTINGDOWN">
+            <summary>
+            Nonzero if the current session is shutting down; otherwise, 0. Windows 2000:  This value is not supported.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_SLOWMACHINE">
+            <summary>
+            Nonzero if the computer has a low-end (slow) processor; otherwise, 0.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_STARTER">
+            <summary>
+            Nonzero if the current operating system is Windows 7 Starter Edition, Windows Vista Starter, or Windows XP Starter Edition; otherwise, 0.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_SWAPBUTTON">
+            <summary>
+            Nonzero if the meanings of the left and right mouse buttons are swapped; otherwise, 0.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_TABLETPC">
+            <summary>
+            Nonzero if the current operating system is the Windows XP Tablet PC edition or if the current operating system is Windows Vista
+            or Windows 7 and the Tablet PC Input service is started; otherwise, 0. The SM_DIGITIZER setting indicates the type of digitizer
+            input supported by a device running Windows 7 or Windows Server 2008 R2. For more information, see Remarks.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_XVIRTUALSCREEN">
+            <summary>
+            The coordinates for the left side of the virtual screen. The virtual screen is the bounding rectangle of all display monitors.
+            The SM_CXVIRTUALSCREEN metric is the width of the virtual screen.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.ImagePresentation.RdpHelper.SystemMetric.SM_YVIRTUALSCREEN">
+            <summary>
+            The coordinates for the top of the virtual screen. The virtual screen is the bounding rectangle of all display monitors.
+            The SM_CYVIRTUALSCREEN metric is the height of the virtual screen.
+            </summary>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Snapshoter">
+            <summary>
+            Represents container class suitable for effective multiple snapshoting.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Snapshoter.GetSnapshot(AtomicusChart.Core.DirectX.RenderTargetManagement.RenderTargetDescription,AtomicusChart.Interface.Data.Vector2F,AtomicusChart.Interface.CameraView.ContextView)">
+            <summary>
+            Renders specified data source into the bitmap.
+            </summary>
+            <param name="description">Render target description.</param>
+            <param name="dpi">Custom Dpi.</param>
+            <param name="customView">Custom view descriptor (optional).</param>
+            <returns>Rendering result.</returns>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Views.Function1DView">
+            <summary>
+            Interaction logic for Function1DView.xaml
+            </summary>
+            <summary>
+            Function1DView
+            </summary>
+        </member>
+        <member name="E:AtomicusChart.WpfControl.Views.Function1DView.PropertyChanged">
+            <inheritdoc/>
+        </member>
+        <member name="E:AtomicusChart.WpfControl.Views.Function1DView.PropertyChanging">
+            <inheritdoc/>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Views.Function1DView.EditableFunction">
+            <summary>
+            Gets or sets editable transfer function.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Views.Function1DView.Function1DSource">
+            <summary>
+            Gets or sets transfer function.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Views.Function1DView.Function1DSourceProperty">
+            <summary>
+            Function source dependency property.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Views.Function1DView.#ctor">
+            <summary>
+            Initializes new instance of <see cref="T:AtomicusChart.WpfControl.Views.Function1DView"/>.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Views.Function1DView.OnPropertyChanging(System.String)">
+            <summary>
+            Call this method to notify about property changing.
+            </summary>
+            <param name="propName">Property name.</param>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Views.Function1DView.OnPropertyChanged(System.String)">
+            <summary>
+            Call this method to notify about property changed.
+            </summary>
+            <param name="propName">Property name.</param>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Views.Function1DView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Views.TickView">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Views.TickView.Title">
+            <summary>
+            Gets or sets title.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Views.TickView.TitleProperty">
+            <summary>
+            Title dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Views.TickView.TitleMargin">
+            <summary>
+            Gets or sets title margins.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Views.TickView.TitleMarginProperty">
+            <summary>
+            Title margins dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Views.TickView.TickLabelRotationDegree">
+            <summary>
+            Gets or sets tick label rotation angle (in degrees).
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Views.TickView.TickLabelRotationDegreeProperty">
+            <summary>
+            Tick label rotation angle dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Views.TickView.TickLabelOffsetAlongTick">
+            <summary>
+            Gets or sets tick label offset along tick.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Views.TickView.TickLabelOffsetAlongTickProperty">
+            <summary>
+            Tick label offset along tick dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Views.TickView.TickLabelOffsetAlongStep">
+            <summary>
+            Gets or sets tick label offset along step.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Views.TickView.TickLabelOffsetAlongStepProperty">
+            <summary>
+            Tick label offset along step dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Views.TickView.TickLabelAlignToTick">
+            <summary>
+            Gets or sets tick label align to tick flag.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Views.TickView.TickLabelAlignToTickProperty">
+            <summary>
+            Tick label align to tick flag dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Views.TickView.Orientation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Views.TickView.OrientationProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Views.TickView.Ticks">
+            <summary>
+            Gets or sets the view ticks.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Views.TickView.TicksProperty">
+            <summary>
+            <see cref="P:AtomicusChart.WpfControl.Views.TickView.Ticks"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.Views.TickView.AxisSettings">
+            <summary>
+            Gets or sets axis settings.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Views.TickView.AxisSettingsProperty">
+            <summary>
+            <see cref="P:AtomicusChart.WpfControl.Views.TickView.AxisSettings"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Views.TickView.#ctor">
+            <summary>
+            Initializes new instance of <see cref="T:AtomicusChart.WpfControl.Views.TickView"/>.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Views.TickView.OnRenderSizeChanged(System.Windows.SizeChangedInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="E:AtomicusChart.WpfControl.Views.TickView.PropertyChanged">
+            <summary>
+            Occurs when a property value is changed.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Views.TickView.OnPropertyChanged(System.String)">
+            <summary>
+            Called when a property value is changed.
+            </summary>
+            <param name="propertyName">Property name.</param>
+        </member>
+        <member name="E:AtomicusChart.WpfControl.Views.TickView.PropertyChanging">
+            <summary>
+            Occurs when a property value is changing.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.Views.TickView.OnPropertyChanging(System.String)">
+            <summary>
+            Called when a property value is changing.
+            </summary>
+            <param name="propName">Property name.</param>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.Views.AxisPosition">
+            <summary>
+            Contains available axis positions.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Views.AxisPosition.Left">
+            <summary>
+            Left position.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Views.AxisPosition.Bottom">
+            <summary>
+            Bottom position.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Views.AxisPosition.Right">
+            <summary>
+            Right position.
+            </summary>
+        </member>
+        <member name="F:AtomicusChart.WpfControl.Views.AxisPosition.Top">
+            <summary>
+            Top position.
+            </summary>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.WpfBitmapHelper">
+            <summary>
+            Contains helper methods for Wpf bitmap managing.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.WpfBitmapHelper.Convert(System.Drawing.Bitmap)">
+            <summary>
+            Convert GDI bitmap to WPF BitmapImage.
+            </summary>
+            <param name="gdiPlusBitmap">GDI bitmap.</param>
+            <returns>WPF BitmapImage.</returns>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.WpfBitmapHelper.Convert(AtomicusChart.Core.BinaryTextureData,AtomicusChart.Interface.Data.Vector2F)">
+            <summary>
+            Converts the binary texture data to WPF compatible image source.
+            </summary>
+            <param name="binaryTextureData">Texture binaryTextureData.</param>
+            <param name="dpi">Image dpi.</param>
+            <returns>Converted bitmap.</returns>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.BitmapSourceRasterImage2DReader">
+            <summary>
+            Represents implementation of <see cref="T:AtomicusChart.Interface.DataReaders.RasterImage2DReader"/> for Wpf compatibility that enables to read <see cref="T:System.Windows.Media.Imaging.BitmapSource"/> objects.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.BitmapSourceRasterImage2DReader.#ctor(System.Windows.Media.Imaging.BitmapSource)">
+            <summary>
+            Initializes new instance of <see cref="T:AtomicusChart.WpfControl.BitmapSourceRasterImage2DReader"/>. Throws exception if bitmap's format is not supported.
+            </summary>
+            <param name="bitmapSource">Source bitmap.</param>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.BitmapSourceRasterImage2DReader.InitializeResource(AtomicusChart.Interface.DataReaders.IResourceWriter2D)">
+            <inheritdoc/>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.WpfCameraTracker">
+            <summary>
+            Tracker of camera state.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.WpfCameraTracker.#ctor(AtomicusChart.WpfControl.ChartControl)">
+            <summary>
+            Ctor.
+            </summary>
+            <param name="chartControl">Control for tracking.</param>
+        </member>
+        <member name="T:AtomicusChart.WpfControl.WpfLegendItem">
+            <summary>
+            Represents Wpf chart legend item view model class.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.WpfLegendItem.IsVisible">
+            <summary>
+            Gets or sets render data visibility.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.WpfLegendItem.Name">
+            <summary>
+            Gets render data name.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.WpfLegendItem.Preview">
+            <summary>
+            Gets render data preview bitmap.
+            </summary>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.WpfLegendItem.ShowPreviewCommand">
+            <summary>
+            The command is used on editor show request.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.WpfLegendItem.Finalize">
+            <summary>
+            Finalizer.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.WpfLegendItem.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="P:AtomicusChart.WpfControl.WpfLegendViewModel.LegendItems">
+            <summary>
+            Gets legend items collection.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.WpfLegendViewModel.#ctor(AtomicusChart.Core.CommonInfrastructure.DataSourceTracker{AtomicusChart.Interface.PresentationData.BaseTypes.RenderData},AtomicusChart.Core.IColorMapOwner,AtomicusChart.WpfControl.ChartControl)">
+            <summary>
+            Initializes new instance of <see cref="T:AtomicusChart.WpfControl.WpfLegendViewModel"/>.
+            </summary>
+            <param name="dataSourceTracker">Data source tracker.</param>
+            <param name="colorMapOwner"></param>
+            <param name="chartControl">Chart instance.</param>
+        </member>
+        <member name="P:AtomicusChart.WpfControl.WpfLegendViewModel.IsDisposed">
+            <summary>
+            Gets a value indicating whether the item has been disposed of.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.WpfLegendViewModel.Dispose">
+            <summary>
+            Releases all resources used by the item.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.WpfLegendViewModel.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the item and its child items and optionally releases the managed resources.
+            </summary>
+            <param name="disposing">True to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.WpfLegendViewModel.Finalize">
+            <summary>
+            Finalizer.
+            </summary>
+        </member>
+        <member name="M:AtomicusChart.WpfControl.WpfControlInteractor.PresentationChanged">
+            <summary>
+            Underlying presentation changed.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>
