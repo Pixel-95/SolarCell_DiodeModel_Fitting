@@ -2,7 +2,7 @@
 
 ### Installing
 You only need to download the executable file `./bin/Debug/SolarCell_DiodeModel_Fitting.exe` within this repository and run it on your windows computer.
-`.NET Framework 4.8` will be required to run it.
+The `.NET Framework 4.8` will be required to run it.
 
 ### Main Window
 This easy-to-use script reads experimentally measured current-voltage data by copy and paste and fits a single-diode equivalent-circuit model to this data via the implicit diode equation.
