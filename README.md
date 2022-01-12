@@ -1,5 +1,9 @@
 ## Program for Fitting experimental IV curves by Single-Diode equivalent-Circuit Model
 
+### Installing
+You only need to download the executable file `./bin/Debug/SolarCell_DiodeModel_Fitting.exe` within this repository and run it on your windows computer.
+`.NET Framework 4.8` will be required to run it.
+
 ### Main Window
 This easy-to-use script reads experimentally measured current-voltage data by copy and paste and fits a single-diode equivalent-circuit model to this data via the implicit diode equation.
 <p align="center">
@@ -14,7 +18,3 @@ On the right side, the experimental data and the fit are plotted.<br><br>
 ### Option Window
 There are several optional preferences for the IV curve. First of all, decimal and column spearators can be set. Furthermore, the units of voltage and currents can be choosen. Finally, the correct temperature has to be set.<br><br>
 <img src="./screenshots/options.png" alt="screenshot of option window" width="220"/>
-
-### Installing
-You only need to download the executable file `./bin/Debug/SolarCell_DiodeModel_Fitting.exe` within this repository and run it on your windows computer.
-`.NET Framework 4.8` will be reduired to run it.
