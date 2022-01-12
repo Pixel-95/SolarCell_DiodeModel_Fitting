@@ -1,6 +1,4 @@
-# überschrift
-
-## Program for Fitting experimental IV curves by Single-Diode equivalent-Circuit Model
+# Program for Fitting experimental IV curves by Single-Diode equivalent-Circuit Model
 
 
 ![screenshot of main program](./screenshots/program.png)
