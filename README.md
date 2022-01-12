@@ -16,4 +16,5 @@ There are several optional preferences for the IV curve. First of all, decimal a
 <img src="./screenshots/options.png" alt="screenshot of option window" width="220"/>
 
 ### Installing
-You only need to download the executable file `./bin/Debug/SolarCell_DiodeModel_Fitting.exe` within this repository.
+You only need to download the executable file `./bin/Debug/SolarCell_DiodeModel_Fitting.exe` within this repository and run it on your windows computer.
+`.NET Framework 4.8` will be reduired to run it.
