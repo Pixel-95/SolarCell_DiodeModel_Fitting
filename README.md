@@ -7,8 +7,8 @@ This easy-to-use script reads experimentally measured current-voltage data by co
 
 The main window of the program is devided into three column. On the left, experimental data can be read from file or copy-pasted from clipboard.
 In the middle, fitting parameters can be automatically fitted or manually manipulated. Moreover, basic solar cell parameters as Voc,jsc, and FF are displayed.
-On the right side, the experimental data and the fit are plotted.<br>
+On the right side, the experimental data and the fit are plotted.<br><br>
 <img src="./screenshots/program.png" alt="screenshot of main program"/>
 
-There are several optional preferences for the IV curve.<br>
+There are several optional preferences for the IV curve. First of all, decimal and column spearators can be set. Furthermore, the units of voltage and currents can be choosen. Finally, the correct temperature has to be set.<br><br>
 <img src="./screenshots/options.png" alt="screenshot of option window" width="220"/>
