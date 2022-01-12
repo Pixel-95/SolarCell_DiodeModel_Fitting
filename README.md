@@ -11,7 +11,7 @@ This easy-to-use script reads experimentally measured current-voltage data by co
 </p>
 
 The main window of the program is devided into three column. On the left, experimental data can be read from file or copy-pasted from clipboard.
-In the middle, fitting parameters can be automatically fitted or manually manipulated. Moreover, basic solar cell parameters as Voc,jsc, and FF are displayed.
+In the middle, fitting parameters can be automatically fitted or manually manipulated. Moreover, basic solar cell parameters as Voc, jsc, and FF are displayed.
 On the right side, the experimental data and the fit are plotted.<br><br>
 <img src="./screenshots/program.png" alt="screenshot of main program"/>
 
