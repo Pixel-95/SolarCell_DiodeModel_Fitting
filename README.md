@@ -10,4 +10,4 @@ In the
 ![screenshot of main program](./screenshots/program.png)
 
 There are several optional preferences for the IV curve.<br>
-<img src="./screenshots/options.png" alt="screenshots of option window" width="200" height="400" />
+<img src="./screenshots/options.png" alt="screenshots of option window" width="300"/>
