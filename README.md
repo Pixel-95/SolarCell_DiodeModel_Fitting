@@ -14,3 +14,6 @@ On the right side, the experimental data and the fit are plotted.<br><br>
 ### Option Window
 There are several optional preferences for the IV curve. First of all, decimal and column spearators can be set. Furthermore, the units of voltage and currents can be choosen. Finally, the correct temperature has to be set.<br><br>
 <img src="./screenshots/options.png" alt="screenshot of option window" width="220"/>
+
+### Installing
+You only need to download the executable file `./bin/Debug/SolarCell_DiodeModel_Fitting.exe` within this repository.
