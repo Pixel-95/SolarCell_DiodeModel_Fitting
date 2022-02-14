@@ -292,7 +292,7 @@ namespace SolarCell_DiodeModel_Fitting
 
             // fit with all parameters
             NonlinearCurveFitter fitter = new NonlinearCurveFitter();
-            fitter.Curve = new IVcurve(temperature, new double[] { initialGuess[0], fitter_noRsh.BestFitParameters[0], fitter_noRsh.BestFitParameters[1], Math.Max(fitter_noRsh.BestFitParameters[2], initialGuess[3] * 1e-3), initialGuess[4] },
+            fitter.Curve = new IVcurve(temperature, new double[] { initialGuess[0], fitter_noRsh.BestFitParameters[0], fitter_noRsh.BestFitParameters[1], fitter_noRsh.BestFitParameters[2], initialGuess[4] },
                 new bool[] { true, true, true, true, true });
             fitter.XValues = orderedExperimentalData.Select(d => d.voltage).ToArray();
             fitter.YValues = orderedExperimentalData.Select(d => d.current).ToArray();
