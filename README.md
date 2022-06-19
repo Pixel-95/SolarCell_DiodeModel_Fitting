@@ -13,7 +13,7 @@ This easy-to-use script reads experimentally measured current-voltage data by co
 <!-- \color{DarkOrange}
 I(V) = -I_\text{ph} + I_0 \cdot \left( \exp\left( \frac{q_e \cdot (V - I(V) \cdot R_\text{s})}{n \cdot k_\text{B} \cdot T} \right) -1 \right) + \frac{V- I(V) \cdot R_\text{s}}{R_\text{sh}}-->
 
-The main window of the program is devided into three column. On the left, experimental data can be read from file or copy-pasted from clipboard.
+The main window of the program is devided into three columns. On the left, experimental data can be read from file or copy-pasted from clipboard.
 In the middle, fitting parameters can be automatically fitted or manually manipulated. Moreover, basic solar cell parameters as Voc, jsc, and FF are displayed.
 On the right side, the experimental data and the fit are plotted.<br><br>
 <img src="./screenshots/program.png" alt="screenshot of main program"/>
