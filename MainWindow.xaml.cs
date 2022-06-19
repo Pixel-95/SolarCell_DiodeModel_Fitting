@@ -29,14 +29,14 @@ using Microsoft.Win32;
 namespace SolarCell_DiodeModel_Fitting
 {
     public enum UnitVoltage { V, mV }
-    public enum UnitCurrent { A, mA, Am2, mAcm2 }
+    public enum UnitCurrent { A, mA, Am2, mAcm2, Acm2 }
 
     public partial class MainWindow : Window
     {
         private static MainWindow mainWindowInstance;
         public static string decimalSeparator = ".";
         public static char newColumnSeparator = '\t';
-        public static double temperature = 300;
+        public static double temperature = 298;
         public UnitVoltage unitVoltage = UnitVoltage.V;
         public UnitCurrent unitCurrent = UnitCurrent.A;
 
@@ -215,6 +215,13 @@ namespace SolarCell_DiodeModel_Fitting
                     textbox_unit_Impp.Text = "mA/cm²";
                     chart.AxesSettings.Axes2D.Y.Title = "current  /  mA/cm²";
                     break;
+                case UnitCurrent.Acm2:
+                    textbox_unit_Iph.Text = "A/cm²";
+                    textbox_unit_I0.Text = "A/cm²";
+                    textbox_unit_Isc.Text = "A/cm²";
+                    textbox_unit_Impp.Text = "A/cm²";
+                    chart.AxesSettings.Axes2D.Y.Title = "current  /  A/cm²";
+                    break;
             }
 
             if (unitVoltage == UnitVoltage.V)
@@ -254,6 +261,11 @@ namespace SolarCell_DiodeModel_Fitting
                         textbox_unit_Rsh.Text = "kΩcm²";
                         textbox_unit_Pmpp.Text = "mW/cm²";
                         break;
+                    case UnitCurrent.Acm2:
+                        textbox_unit_Rs.Text = "Ωcm²";
+                        textbox_unit_Rsh.Text = "Ωcm²";
+                        textbox_unit_Pmpp.Text = "W/cm²";
+                        break;
                 }
             }
             else
@@ -279,6 +291,11 @@ namespace SolarCell_DiodeModel_Fitting
                         textbox_unit_Rs.Text = "Ωcm²";
                         textbox_unit_Rsh.Text = "Ωcm²";
                         textbox_unit_Pmpp.Text = "µW/cm²";
+                        break;
+                    case UnitCurrent.Acm2:
+                        textbox_unit_Rs.Text = "mΩcm²";
+                        textbox_unit_Rsh.Text = "mΩcm²";
+                        textbox_unit_Pmpp.Text = "mW/cm²";
                         break;
                 }
             }
@@ -370,7 +387,7 @@ namespace SolarCell_DiodeModel_Fitting
         }
         private void OpenImprint(object sender, RoutedEventArgs e)
         {
-            string message = "Version 2.1.220111\nProgram by Mario Zinßer (2021)\nQuestions and remarks to mariozinsser@freenet.de";
+            string message = "Version 2.3.220619\nProgram by Mario Zinßer (2021)\nQuestions and remarks to mariozinsser@freenet.de";
             string title = "Imprint";
             MessageBox.Show(message, title);
         }

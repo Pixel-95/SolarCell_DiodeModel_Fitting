@@ -50,6 +50,7 @@
             <ComboBoxItem>mA</ComboBoxItem>
             <ComboBoxItem>A/m²</ComboBoxItem>
             <ComboBoxItem>mA/cm²</ComboBoxItem>
+            <ComboBoxItem>A/cm²</ComboBoxItem>
         </ComboBox>
 
         <TextBlock Text="Temperature in Kelvin" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3"/>

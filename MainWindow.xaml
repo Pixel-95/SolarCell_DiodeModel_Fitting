@@ -194,14 +194,101 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Button Content="Get initial guess from data" TabIndex="17" Grid.Row="0" Grid.Column="0" Click="Click_GetInitGuess" ToolTip="Get initial guess for diode parameters of the IV curve."/>
-                <Button Content="Fit from above parameters" TabIndex="18" Grid.Row="0" Grid.Column="2" Click="Click_FitFromValues" ToolTip="Fit IV curve to experimental data starting from the above diode parameters."/>
-                <Button Content="Undo last step" x:Name="button_undo" IsEnabled="False" TabIndex="19" Grid.Row="2" Grid.Column="0" Click="Click_Undo" ToolTip="Undo the last step of fitting or initial guessing."/>
-                <Button Content="Plot" TabIndex="20" Grid.Row="2" Grid.Column="2" Click="Click_Plot" ToolTip="Plot experimental data and IV curve."/>
+                <Button FontSize="12" Content="Get initial guess from data" TabIndex="17" Grid.Row="0" Grid.Column="0" Click="Click_GetInitGuess" ToolTip="Get initial guess for diode parameters of the IV curve."
+                    Height="28" Background="#666666" Foreground="White" BorderThickness="20" Margin="0,0,0,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="DarkBlue" TargetName="Border" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <Button FontSize="12" Content="Fit from above parameters" TabIndex="18" Grid.Row="0" Grid.Column="2" Click="Click_FitFromValues" ToolTip="Fit IV curve to experimental data starting from the above diode parameters."
+                    Height="28" Background="#666666" Foreground="White" BorderThickness="20" Margin="0,0,0,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="DarkBlue" TargetName="Border" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <Button FontSize="12" Content="Undo last step" x:Name="button_undo" IsEnabled="False" TabIndex="19" Grid.Row="2" Grid.Column="0" Click="Click_Undo" ToolTip="Undo the last step of fitting or initial guessing."
+                    Height="28" Background="#666666" Foreground="White" BorderThickness="20" Margin="0,0,0,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="DarkBlue" TargetName="Border" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <Button FontSize="12" Content="Plot" TabIndex="20" Grid.Row="2" Grid.Column="2" Click="Click_Plot" ToolTip="Plot experimental data and IV curve."
+                    Height="28" Background="#666666" Foreground="White" BorderThickness="20" Margin="0,0,0,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="DarkBlue" TargetName="Border" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
                 
             </Grid>
 
-            <Button Click="Click_Fit" TabIndex="21" FontSize="14" Content="Fit" Grid.Row="28" Grid.Column="0" Grid.ColumnSpan="7" ToolTip="Fit IV curve to experimental data with all parameters starting from a new calculated initial guess."
+            <Button FontSize="14" Content="Fit" TabIndex="21" Grid.Row="28" Grid.Column="0" Grid.ColumnSpan="7" Click="Click_Fit" ToolTip="Fit IV curve to experimental data with all parameters starting from a new calculated initial guess."
                     Height="28" Background="#444444" Foreground="White" BorderThickness="20" Margin="0,10,0,10">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">

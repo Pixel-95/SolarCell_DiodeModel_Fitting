@@ -57,6 +57,9 @@ namespace SolarCell_DiodeModel_Fitting
                 case UnitCurrent.mAcm2:
                     combobox_currentUnit.SelectedIndex = 3;
                     break;
+                case UnitCurrent.Acm2:
+                    combobox_currentUnit.SelectedIndex = 4;
+                    break;
             }
 
             textbox_temperature.Text = temperature.ToString();
@@ -94,6 +97,9 @@ namespace SolarCell_DiodeModel_Fitting
                     break;
                 case 3:
                     unitCurrent = UnitCurrent.mAcm2;
+                    break;
+                case 4:
+                    unitCurrent = UnitCurrent.Acm2;
                     break;
             }
 
